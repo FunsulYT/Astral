@@ -1,0 +1,6 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": { "item": "minecraft:tuff" },
+    "result": "astral:chiseled_tuff",
+    "count": 1
+}

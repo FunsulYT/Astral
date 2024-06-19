@@ -120,6 +120,18 @@ public final class AstralItems extends ContentRegistrar {
     );
 
     /**
+     * The chiseled tuff block item.
+     *
+     * @since 2.3.0
+     */
+    @RegistrationPriority(1)
+    public static final AstralBlockItem CHISELED_TUFF = new AstralBlockItem("chiseled_tuff",
+        AstralBlocks.CHISELED_TUFF,
+        new Settings(),
+        () -> ItemGroups.BUILDING_BLOCKS
+    );
+
+    /**
      * The chocolate milk food item.
      *
      * @since 2.0.0
@@ -724,6 +736,7 @@ public final class AstralItems extends ContentRegistrar {
      *
      * @since 2.3.0
      */
+    @RegistrationPriority(1)
     public static final AstralBlockItem TUFF_SLAB = new AstralBlockItem("tuff_slab",
         AstralBlocks.TUFF_SLAB,
         new Settings(),
@@ -735,8 +748,21 @@ public final class AstralItems extends ContentRegistrar {
      *
      * @since 2.3.0
      */
+    @RegistrationPriority(1)
     public static final AstralBlockItem TUFF_STAIRS = new AstralBlockItem("tuff_stairs",
         AstralBlocks.TUFF_STAIRS,
+        new Settings(),
+        () -> ItemGroups.BUILDING_BLOCKS
+    );
+
+    /**
+     * The tuff wall block item.
+     *
+     * @since 2.3.0
+     */
+    @RegistrationPriority(1)
+    public static final AstralBlockItem TUFF_WALL = new AstralBlockItem("tuff_wall",
+        AstralBlocks.TUFF_WALL,
         new Settings(),
         () -> ItemGroups.BUILDING_BLOCKS
     );

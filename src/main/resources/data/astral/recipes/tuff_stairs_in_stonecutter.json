@@ -1,0 +1,6 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": { "item": "minecraft:tuff" },
+    "result": "astral:tuff_stairs",
+    "count": 1
+}

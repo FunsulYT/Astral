@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: AGPL-3.0-or-later
  *
- * Copyright © 2024 FunsulYT
+ * Copyright © 2024 Jaxydog
  *
  * This file is part of Astral.
  *
@@ -14,62 +14,47 @@
 
 package dev.jaxydog.astral.content.block.custom;
 
-import dev.jaxydog.astral.content.block.AstralSlabBlock;
-import dev.jaxydog.astral.datagen.LootTableGenerator;
+import dev.jaxydog.astral.content.block.AstralBlock;
+import dev.jaxydog.astral.content.block.AstralBlocks;
 import dev.jaxydog.astral.datagen.RecipeGenerator;
 import dev.jaxydog.astral.datagen.TagGenerator;
 import dev.jaxydog.astral.register.Registered.Generated;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.loot.LootPool;
-import net.minecraft.loot.LootTable.Builder;
-import net.minecraft.loot.condition.SurvivesExplosionLootCondition;
-import net.minecraft.loot.context.LootContextTypes;
-import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.BlockTags;
 
 /**
- * The tuff slab block.
+ * The chiseled tuff block.
  *
  * @author FunsulYT
  * @since 2.3.0
  */
-public class TuffSlabBlock extends AstralSlabBlock implements Generated {
+public class ChiseledTuffBlock extends AstralBlock implements Generated {
 
     /**
-     * Creates a new stair block using the given settings.
+     * Creates a new block using the given settings.
      *
      * @param path The block's identifier path.
      * @param settings The block's settings.
      *
-     * @since 2.3.0
+     * @since 2.0.0
      */
-    public TuffSlabBlock(String path, Settings settings) {
+    public ChiseledTuffBlock(String path, Settings settings) {
         super(path, settings);
     }
 
     @Override
     public void generate() {
-        TagGenerator.getInstance().generate(BlockTags.PICKAXE_MINEABLE, builder -> builder.add(this));
-
-        LootTableGenerator.getInstance().generate(
-            LootContextTypes.BLOCK,
-            this.getLootTableId(),
-            new Builder().pool(LootPool.builder()
-                .rolls(ConstantLootNumberProvider.create(1F))
-                .with(ItemEntry.builder(this))
-                .conditionally(SurvivesExplosionLootCondition.builder()))
-        );
+        TagGenerator.getInstance().generate(BlockTags.PICKAXE_MINEABLE, b -> b.add(this));
 
         RecipeGenerator.getInstance().generate(
             this.getRegistryId(),
-            ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, this, 6)
-                .pattern("XXX")
-                .input('X', Blocks.TUFF)
-                .criterion("block", FabricRecipeProvider.conditionsFromItem(Blocks.TUFF))
+            ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, this)
+                .pattern("X")
+                .pattern("X")
+                .input('X', AstralBlocks.TUFF_SLAB)
+                .criterion("block", FabricRecipeProvider.conditionsFromItem(AstralBlocks.TUFF_SLAB))
         );
     }
 

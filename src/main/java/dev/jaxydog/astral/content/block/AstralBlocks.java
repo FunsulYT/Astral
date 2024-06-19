@@ -73,6 +73,16 @@ public final class AstralBlocks extends ContentRegistrar {
     );
 
     /**
+     * The chiseled tuff block.
+     *
+     * @since 2.3.0
+     */
+    public static final ChiseledTuffBlock CHISELED_TUFF = new ChiseledTuffBlock(
+        "chiseled_tuff",
+        Settings.copy(Blocks.TUFF)
+    );
+
+    /**
      * The crimson stem slab block.
      *
      * @since 2.2.0
@@ -364,6 +374,13 @@ public final class AstralBlocks extends ContentRegistrar {
         Blocks.TUFF.getDefaultState(),
         Settings.copy(Blocks.TUFF)
     );
+
+    /**
+     * The tuff wall block.
+     *
+     * @since 2.3.0
+     */
+    public static final TuffWallBlock TUFF_WALL = new TuffWallBlock("tuff_wall", Settings.copy(Blocks.TUFF));
 
     /**
      * The warped stem slab block.

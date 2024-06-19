@@ -3,15 +3,15 @@
   "category": "building",
   "key": {
     "X": {
-      "item": "minecraft:tuff"
+      "item": "astral:tuff_slab"
     }
   },
   "pattern": [
-    "XXX"
+    "X",
+    "X"
   ],
   "result": {
-    "count": 6,
-    "item": "astral:tuff_slab"
+    "item": "astral:chiseled_tuff"
   },
   "show_notification": true
 }

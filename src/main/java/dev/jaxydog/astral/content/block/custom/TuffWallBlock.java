@@ -14,7 +14,7 @@
 
 package dev.jaxydog.astral.content.block.custom;
 
-import dev.jaxydog.astral.content.block.AstralSlabBlock;
+import dev.jaxydog.astral.content.block.AstralWallBlock;
 import dev.jaxydog.astral.datagen.LootTableGenerator;
 import dev.jaxydog.astral.datagen.RecipeGenerator;
 import dev.jaxydog.astral.datagen.TagGenerator;
@@ -32,12 +32,12 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.BlockTags;
 
 /**
- * The tuff slab block.
+ * The tuff wall block.
  *
  * @author FunsulYT
  * @since 2.3.0
  */
-public class TuffSlabBlock extends AstralSlabBlock implements Generated {
+public class TuffWallBlock extends AstralWallBlock implements Generated {
 
     /**
      * Creates a new stair block using the given settings.
@@ -47,12 +47,14 @@ public class TuffSlabBlock extends AstralSlabBlock implements Generated {
      *
      * @since 2.3.0
      */
-    public TuffSlabBlock(String path, Settings settings) {
+    public TuffWallBlock(String path, Settings settings) {
         super(path, settings);
     }
 
     @Override
     public void generate() {
+        super.generate();
+
         TagGenerator.getInstance().generate(BlockTags.PICKAXE_MINEABLE, builder -> builder.add(this));
 
         LootTableGenerator.getInstance().generate(
@@ -66,7 +68,8 @@ public class TuffSlabBlock extends AstralSlabBlock implements Generated {
 
         RecipeGenerator.getInstance().generate(
             this.getRegistryId(),
-            ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, this, 6)
+            ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, this)
+                .pattern("XXX")
                 .pattern("XXX")
                 .input('X', Blocks.TUFF)
                 .criterion("block", FabricRecipeProvider.conditionsFromItem(Blocks.TUFF))

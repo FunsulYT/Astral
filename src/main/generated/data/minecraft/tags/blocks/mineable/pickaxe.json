@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "astral:chiseled_tuff",
     "astral:cobbled_sandstone",
     "astral:white_amethyst_block",
     "astral:light_gray_amethyst_block",
@@ -101,6 +102,7 @@
     "astral:randomizer",
     "astral:smooth_stone_stairs",
     "astral:tuff_slab",
-    "astral:tuff_stairs"
+    "astral:tuff_stairs",
+    "astral:tuff_wall"
   ]
 }

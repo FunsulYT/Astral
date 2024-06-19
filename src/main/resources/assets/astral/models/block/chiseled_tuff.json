@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "astral:block/chiseled_tuff",
+        "down": "astral:block/chiseled_tuff_top",
+        "up": "astral:block/chiseled_tuff_top",
+        "north": "astral:block/chiseled_tuff",
+        "south": "astral:block/chiseled_tuff",
+        "west": "astral:block/chiseled_tuff",
+        "east": "astral:block/chiseled_tuff"
+    }
+}

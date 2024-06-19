@@ -7,11 +7,11 @@
     }
   },
   "pattern": [
+    "XXX",
     "XXX"
   ],
   "result": {
-    "count": 6,
-    "item": "astral:tuff_slab"
+    "item": "astral:tuff_wall"
   },
   "show_notification": true
 }

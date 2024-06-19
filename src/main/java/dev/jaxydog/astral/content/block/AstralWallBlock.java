@@ -14,8 +14,11 @@
 
 package dev.jaxydog.astral.content.block;
 
+import dev.jaxydog.astral.datagen.TagGenerator;
+import dev.jaxydog.astral.register.Registered.Generated;
 import net.minecraft.block.Block;
 import net.minecraft.block.WallBlock;
+import net.minecraft.registry.tag.BlockTags;
 
 /**
  * An extension of a {@link WallBlock} that provides commonly used functionality.
@@ -30,7 +33,7 @@ import net.minecraft.block.WallBlock;
  * @see Custom
  * @since 2.3.0
  */
-public class AstralWallBlock extends WallBlock implements Custom {
+public class AstralWallBlock extends WallBlock implements Custom, Generated {
 
     /**
      * The block's identifier path used within the registration system.
@@ -61,6 +64,11 @@ public class AstralWallBlock extends WallBlock implements Custom {
     @Override
     public String getRegistryPath() {
         return this.path;
+    }
+
+    @Override
+    public void generate() {
+        TagGenerator.getInstance().generate(BlockTags.WALLS, b -> b.add(this));
     }
 
 }
