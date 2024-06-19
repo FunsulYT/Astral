@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=bottom": {
+            "model": "astral:block/tuff_slab"
+        },
+        "type=double": {
+            "model": "astral:block/tuff"
+        },
+        "type=top": {
+            "model": "astral:block/tuff_slab_top"
+        }
+    }
+}

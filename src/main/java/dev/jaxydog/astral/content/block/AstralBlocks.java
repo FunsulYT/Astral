@@ -349,6 +349,23 @@ public final class AstralBlocks extends ContentRegistrar {
     );
 
     /**
+     * The tuff slab block.
+     *
+     * @since 2.3.0
+     */
+    public static final TuffSlabBlock TUFF_SLAB = new TuffSlabBlock("tuff_slab", Settings.copy(Blocks.TUFF));
+
+    /**
+     * The tuff stairs block.
+     *
+     * @since 2.3.0
+     */
+    public static final TuffStairsBlock TUFF_STAIRS = new TuffStairsBlock("tuff_stairs",
+        Blocks.TUFF.getDefaultState(),
+        Settings.copy(Blocks.TUFF)
+    );
+
+    /**
      * The warped stem slab block.
      *
      * @since 2.2.0

@@ -720,6 +720,28 @@ public final class AstralItems extends ContentRegistrar {
     );
 
     /**
+     * The tuff slab block item.
+     *
+     * @since 2.3.0
+     */
+    public static final AstralBlockItem TUFF_SLAB = new AstralBlockItem("tuff_slab",
+        AstralBlocks.TUFF_SLAB,
+        new Settings(),
+        () -> ItemGroups.BUILDING_BLOCKS
+    );
+
+    /**
+     * The tuff stairs block item.
+     *
+     * @since 2.3.0
+     */
+    public static final AstralBlockItem TUFF_STAIRS = new AstralBlockItem("tuff_stairs",
+        AstralBlocks.TUFF_STAIRS,
+        new Settings(),
+        () -> ItemGroups.BUILDING_BLOCKS
+    );
+
+    /**
      * The void essence item.
      *
      * @since 2.0.0
